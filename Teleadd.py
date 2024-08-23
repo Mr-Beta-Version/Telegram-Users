@@ -1,11 +1,12 @@
 from telethon import TelegramClient
 from telethon.errors import SessionPasswordNeededError, UserPrivacyRestrictedError, PeerFloodError, UserAlreadyParticipantError
+from telethon.tl.functions.channels import InviteToChannelRequest
 
 api_id = 'YOUR_API_ID'
 api_hash = 'YOUR_API_HASH'
 phone_number = 'YOUR_PHONE_NUMBER'
 group_id = input('Group ID or Username >> ')
-users_to_add = input('Enter usernames or IDs (comma-separated) >> ').split(',')
+users_to_add = input('Enter usernames or IDs Without @ (comma-separated) >> ').split(',')
 
 client = TelegramClient('session_name', api_id, api_hash)
 
